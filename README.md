@@ -23,6 +23,34 @@ DBMS project with CRUD operations for managing construction site details (employ
    ```bash
    git clone https://github.com/adityaff10/construction-project-management.git
 
+2. **Navigate to the Project Directory**
+   ```bash
+   cd construction-project-management
+   
+3. **Set Up the Database**
+  
+  -  Create a database named construction_db.
+  - Import the SQL file located in the database folder:
+    ```sql
+       mysql -u your-username -p construction_db < database/construction_db.sql
+
+4. **Configure the Database Connection**
+
+  - Update the dbconfig.php file with your database credentials:
+    ```php
+    <?php
+        $servername = "localhost";
+        $username = "your-username";
+        $password = "your-password";
+        $dbname = "construction_db";
+    ?>
+
+5. **Start the Server**
+
+ - If you're using XAMPP, move the project folder to the htdocs directory.
+ - Start the Apache and MySQL services from the XAMPP control panel.
+ - Access the project in your browser at http://localhost/construction-project-management.
+
 ## Usage
 - Home Page: Provides an overview of the system.
 - Projects: View and create new projects.
